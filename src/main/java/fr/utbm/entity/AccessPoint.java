@@ -5,21 +5,26 @@
  */
 package fr.utbm.entity;
 
-/**
- *
- * @author PanJin
- */
-public class AccessPoint {
-    
-    private Integer id;
-    private String mac_adr;
-    private Integer location_id;
+import javax.persistence.Access;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-    public Integer getId() {
+
+@Entity
+@Table(name = "access_points")
+public class AccessPoint {
+    @Id@GeneratedValue
+    private int id;
+    private String mac_adr;
+    private int location_id;
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -31,11 +36,11 @@ public class AccessPoint {
         this.mac_adr = mac_adr;
     }
 
-    public Integer getLocation_id() {
+    public int getLocation_id() {
         return location_id;
     }
 
-    public void setLocation_id(Integer location_id) {
+    public void setLocation_id(int location_id) {
         this.location_id = location_id;
     }
     

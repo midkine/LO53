@@ -5,25 +5,29 @@
  */
 package fr.utbm.entity;
 
-/**
- *
- * @author PanJin
- */
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="maps")
 public class Map {
     
-    private Integer id;
+	@Id@GeneratedValue
+    private int id;
     private String description;
-    private Integer px_width;
-    private Integer px_height;
+    private int px_width;
+    private int px_height;
     private Double m_width;
     private Double m_height;
     private byte content;
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -35,19 +39,19 @@ public class Map {
         this.description = description;
     }
 
-    public Integer getPx_width() {
+    public int getPx_width() {
         return px_width;
     }
 
-    public void setPx_width(Integer px_width) {
+    public void setPx_width(int px_width) {
         this.px_width = px_width;
     }
 
-    public Integer getPx_height() {
+    public int getPx_height() {
         return px_height;
     }
 
-    public void setPx_height(Integer px_height) {
+    public void setPx_height(int px_height) {
         this.px_height = px_height;
     }
 

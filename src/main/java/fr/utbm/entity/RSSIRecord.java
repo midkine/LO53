@@ -5,30 +5,34 @@
  */
 package fr.utbm.entity;
 
-/**
- *
- * @author PanJin
- */
-public class RSSIRecord {
-    
-    private Integer id_loc;
-    private Integer id_ap;
-    private double value;
-    private Integer occurence;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-    public Integer getId_loc() {
+@Entity
+@Table(name="rssi")
+public class RSSIRecord {
+    @Id@GeneratedValue
+	private int id;
+    private int id_loc;
+    private int id_ap;
+    private double value;
+    private int occurence;
+
+    public int getId_loc() {
         return id_loc;
     }
 
-    public void setId_loc(Integer id_loc) {
+    public void setId_loc(int id_loc) {
         this.id_loc = id_loc;
     }
 
-    public Integer getId_ap() {
+    public int getId_ap() {
         return id_ap;
     }
 
-    public void setId_ap(Integer id_ap) {
+    public void setId_ap(int id_ap) {
         this.id_ap = id_ap;
     }
 
@@ -40,11 +44,11 @@ public class RSSIRecord {
         this.value = value;
     }
 
-    public Integer getOccurence() {
+    public int getOccurence() {
         return occurence;
     }
 
-    public void setOccurence(Integer occurence) {
+    public void setOccurence(int occurence) {
         this.occurence = occurence;
     }
     
